@@ -1,0 +1,43 @@
+<html>
+<title>Js Assignment</title>
+<script type="text/javascript">
+	function set(key,value)
+	{ 
+		this.setItem(key,value);
+	}
+
+	function get(key)
+	{
+		alert(this.getItem(key));
+	}
+	function getLength()
+	{
+		alert(this.length);
+	}
+	function remove(key)
+	{
+		this.removeItem(key);
+	}
+	//calls for session storage 
+
+	set.call(sessionStorage,"third","second");
+	get.call(sessionStorage,"third");
+	getLength.call(sessionStorage);
+
+	//call for localStorage
+
+	set.call(localStorage,"third","second");
+	get.call(localStorage,"third");
+	getLength.call(localStorage);
+
+</script>
+<!--body>
+	<form>
+		Enter Key:
+		<input type="text" name="key" value="key">
+		Enter Value:
+		<input type="text" name="value" value="value">
+		<input type="submit" value="submit" onclick="set(sessionStorage,key,value)">
+	</form>
+</body!-->
+</html>
